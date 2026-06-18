@@ -1,0 +1,2 @@
+import { PageHeader } from "@/components/PageHeader"; import { fees, money } from "@/lib/demo-data";
+export default function Page() { return <section className="stack"><PageHeader eyebrow="Fictional commercial view" title="Fees & Commercial">Agreed fee, forecast cost and variance exposure.</PageHeader><div className="panel"><ul className="list">{fees.map((f) => <li key={f.project}><strong>{f.project}: {f.status}</strong><br /><small>{money(f.agreed)} agreed · {money(f.forecast)} forecast · {money(f.variance)} variance</small></li>)}</ul></div></section>; }

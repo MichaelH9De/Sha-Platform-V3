@@ -1,0 +1,2 @@
+import { PageHeader } from "@/components/PageHeader"; import { bimRecords } from "@/lib/demo-data";
+export default function Page() { return <section className="stack"><PageHeader eyebrow="Fictional digital governance" title="BIM / Revit">Model status and coordination checks across the portfolio.</PageHeader><div className="panel"><ul className="list">{bimRecords.map((b) => <li key={b.id}><strong>{b.model}</strong><br /><small>{b.project} · {b.discipline} · {b.status} · checked {b.checked}</small></li>)}</ul></div></section>; }

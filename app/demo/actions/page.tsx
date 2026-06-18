@@ -1,0 +1,2 @@
+import { PageHeader } from "@/components/PageHeader"; import { actions } from "@/lib/demo-data";
+export default function Page() { return <section className="stack"><PageHeader eyebrow="Fictional delivery control" title="Actions">Owned actions, priorities, due dates and escalation state.</PageHeader><div className="panel"><ul className="list">{actions.map((a) => <li key={a.id}><strong>{a.priority}: {a.description}</strong><br /><small>{a.project} · {a.owner} · {a.status} · due {a.due}</small></li>)}</ul></div></section>; }

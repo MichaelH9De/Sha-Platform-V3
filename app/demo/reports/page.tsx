@@ -1,0 +1,2 @@
+import { PageHeader } from "@/components/PageHeader"; import { reports } from "@/lib/demo-data";
+export default function Page() { return <section className="stack"><PageHeader eyebrow="Fictional reporting" title="Client Reports">Audience-controlled progress report examples.</PageHeader><div className="panel"><ul className="list">{reports.map((r) => <li key={r.id}><strong>{r.title}: {r.status}</strong><br /><small>{r.project} · {r.audience} · {r.date}</small></li>)}</ul></div></section>; }

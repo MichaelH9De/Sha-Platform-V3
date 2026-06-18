@@ -1,0 +1,2 @@
+import { PageHeader } from "@/components/PageHeader"; import { auditEvents } from "@/lib/demo-data";
+export default function Page() { return <section className="stack"><PageHeader eyebrow="Fictional governance trail" title="Audit Events">Examples of how material changes would be recorded in the production platform.</PageHeader><div className="panel"><ul className="list">{auditEvents.map((a) => <li key={a.id}><strong>{a.action} · {a.entity}</strong><br /><small>{a.actor} · {a.time}</small></li>)}</ul></div></section>; }

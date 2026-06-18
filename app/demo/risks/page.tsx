@@ -1,0 +1,2 @@
+import { PageHeader } from "@/components/PageHeader"; import { risks } from "@/lib/demo-data";
+export default function Page() { return <section className="stack"><PageHeader eyebrow="Fictional control register" title="Risks">Severity, likelihood, ownership and mitigation across the portfolio.</PageHeader><div className="panel"><ul className="list">{risks.map((r) => <li key={r.id}><strong>{r.severity}/{r.likelihood}: {r.description}</strong><br /><small>{r.project} · {r.owner} · {r.status} · {r.mitigation}</small></li>)}</ul></div></section>; }

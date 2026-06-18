@@ -1,0 +1,2 @@
+import { PageHeader } from "@/components/PageHeader"; import { qaReviews } from "@/lib/demo-data";
+export default function Page() { return <section className="stack"><PageHeader eyebrow="Fictional technical governance" title="QA Reviews">Review status, reviewer and required action before issue.</PageHeader><div className="panel"><ul className="list">{qaReviews.map((q) => <li key={q.id}><strong>{q.deliverable}: {q.status}</strong><br /><small>{q.project} · reviewer {q.reviewer} · {q.action}</small></li>)}</ul></div></section>; }

@@ -1,0 +1,2 @@
+import { PageHeader } from "@/components/PageHeader"; import { resources } from "@/lib/demo-data";
+export default function Page() { return <section className="stack"><PageHeader eyebrow="Fictional capacity plan" title="Resources">Weekly project allocation and available capacity.</PageHeader><div className="panel"><ul className="list">{resources.map((r) => <li key={r.id}><strong>{r.person}: {r.planned}/{r.capacity} hours {r.planned > r.capacity ? "· OVERALLOCATED" : ""}</strong><br /><small>{r.project} · {r.discipline} · week of {r.week}</small></li>)}</ul></div></section>; }

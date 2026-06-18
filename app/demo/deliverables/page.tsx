@@ -1,0 +1,2 @@
+import { PageHeader } from "@/components/PageHeader"; import { deliverables } from "@/lib/demo-data";
+export default function Page() { return <section className="stack"><PageHeader eyebrow="Fictional delivery register" title="Deliverables">Design outputs, ownership, dates, revisions and QA state.</PageHeader><div className="panel"><ul className="list">{deliverables.map((d) => <li key={d.id}><strong>{d.title}</strong><br /><small>{d.project} · {d.discipline} · {d.owner} · {d.status} · QA {d.qa} · {d.revision} · {d.issue} · due {d.due}</small></li>)}</ul></div></section>; }

@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { PageHeader } from "@/components/PageHeader";
+import { projects, deliverables, risks, money } from "@/lib/demo-data";
+export default function Page() { return <section className="stack"><PageHeader eyebrow="Fictional portfolio" title="Projects">Explore project health, stages, commercial position and delivery records.</PageHeader><div className="panel"><ul className="list">{projects.map((project) => <li key={project.id}><Link href={`/demo/projects/${project.id}`}><strong>{project.name}</strong></Link><br /><small>{project.client} · {project.sector} · {project.status} · {project.health} · {project.stage}</small><br /><small>{money(project.fee)} fee · {deliverables.filter((d) => d.projectId === project.id).length} deliverables · {risks.filter((r) => r.project === project.name).length} risks</small></li>)}</ul></div></section>; }
